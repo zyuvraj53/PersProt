@@ -22,6 +22,12 @@
         h1 {
             color: #333;
         }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
         a {
             display: inline-block;
             margin-top: 10px;
@@ -35,13 +41,25 @@
         a:hover {
             background-color: #0056b3;
         }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="https://github.com/zyuvraj53.png" alt="Yuvraj Singh">
         <h1>Yuvraj Singh</h1>
         <p>Welcome to my personal webpage!</p>
-        <a href="https://www.github.com/zyuvraj53" target="_blank">Visit My GitHub</a>
+        <div class="button-container">
+            <a href="https://www.github.com/zyuvraj53" target="_blank">Visit My GitHub</a>
+            <a href="https://www.linkedin.com/in/yuvraj-singh-503970202/" target="_blank">Visit My LinkedIn</a>
+            <a href="https://www.odishapotli.in" target="_blank">Visit OdishaPotli</a>
+        </div>
     </div>
 </body>
 </html>
