@@ -7,58 +7,195 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
             margin: 0;
-            padding: 50px;
+            padding: 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .container {
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-container {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            max-width: 1200px;
+        }
+
+        .tech-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .profile-container {
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
+            width: 300px;
+            text-align: center; /* Explicitly center all content */
         }
+
         h1 {
             color: #333;
+            margin: 10px 0;
         }
-        img {
+
+        h2 {
+            color: #444;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        img.profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin: 0 auto 20px; /* Center image with auto margins */
+            display: block; /* Ensure block-level for centering */
         }
+
         a {
-            display: inline-block;
-            margin-top: 10px;
             text-decoration: none;
             color: white;
             background-color: #007bff;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 5px;
             transition: 0.3s;
+            display: block;
+            margin: 5px auto; /* Center buttons */
         }
+
         a:hover {
             background-color: #0056b3;
         }
+
         .button-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            align-items: center;
             margin-top: 20px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tech-item {
+            text-align: center;
+        }
+
+        .tech-item img {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .tech-item span {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://github.com/zyuvraj53.png" alt="Yuvraj Singh">
-        <h1>Yuvraj Singh</h1>
-        <p>Welcome to my personal webpage!</p>
-        <div class="button-container">
-            <a href="https://www.github.com/zyuvraj53" target="_blank">Visit My GitHub</a>
-            <a href="https://www.linkedin.com/in/yuvraj-singh-503970202/" target="_blank">Visit My LinkedIn</a>
+    <div class="main-container">
+        <div class="tech-container">
+            <h2>Technologies Known</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/c.svg" alt="C">
+                    <span>C</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cplusplus.svg" alt="C++">
+                    <span>C++</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/java.svg" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/spring.svg" alt="Spring Boot">
+                    <span>Spring Boot</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="JS">
+                    <span>JS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/typescript.svg" alt="TS">
+                    <span>TS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/css3.svg" alt="CSS3">
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/react.svg" alt="React.js">
+                    <span>React.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nextdotjs.svg" alt="Next.js">
+                    <span>Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/nodedotjs.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/express.svg" alt="Express.js">
+                    <span>Express.js</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/postgresql.svg" alt="PostgreSQL">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mongodb.svg" alt="MongoDB">
+                    <span>MongoDB</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/lua.svg" alt="Lua">
+                    <span>Lua</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/haskell.svg" alt="Haskell">
+                    <span>Haskell</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/bash-1.svg" alt="Bash">
+                    <span>Bash</span>
+                </div>
+            </div>
+            <h2>See Examples of Work</h2>
             <a href="https://www.odishapotli.in" target="_blank">Visit OdishaPotli</a>
+        </div>
+
+        <div class="profile-container">
+            <img class="profile-img" src="https://github.com/zyuvraj53.png" alt="Yuvraj Singh">
+            <h1>Yuvraj Singh</h1>
+            <p>Welcome to my personal webpage!</p>
+            <div class="button-container">
+                <a href="https://www.github.com/zyuvraj53" target="_blank">Visit My GitHub</a>
+                <a href="https://www.linkedin.com/in/yuvraj-singh-503970202/" target="_blank">Visit My LinkedIn</a>
+            </div>
         </div>
     </div>
 </body>
